@@ -1,0 +1,76 @@
+/* General Setup */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f9fa; /* Light background for the body */
+    color: #212529; /* Dark text color */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Header and Search Bar */
+header {
+    border-bottom: 1px solid #e9ecef;
+}
+
+.search-bar {
+    max-width: 400px;
+}
+
+.search-bar .input-group-text,
+.search-bar .form-control {
+    background-color: #f1f3f5 !important;
+}
+
+/* Quick Links Section */
+.quick-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    min-height: 150px;
+}
+
+.quick-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.quick-link i {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.quick-link h5 {
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+/* Card Colors for Quick Links */
+.card-1 { background-color: #007bff; } /* Blue */
+.card-2 { background-color: #28a745; } /* Green */
+.card-3 { background-color: #ffc107; } /* Yellow/Warning */
+.card-4 { background-color: #dc3545; } /* Red/Danger */
+.card-5 { background-color: #17a2b8; } /* Teal/Info */
+
+/* Resource Cards */
+.resource-card {
+    border-left-width: 5px !important;
+}
+
+.border-start-primary { border-left-color: #007bff !important; }
+.border-start-warning { border-left-color: #ffc107 !important; }
+
+/* Announcements Aside */
+.card-header {
+    border-bottom: 1px solid #e9ecef;
+}
+
+.list-group-item {
+    border-color: #e9ecef !important;
+    background-color: #ffffff; /* Explicitly white for light mode */
+}

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | FAS Supportive Portal</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href=""> 
+
+    <style>
+        /* Ensures the text on the status cards is white and readable in both themes */
+        .status-card.bg-primary, 
+        .status-card.bg-success, 
+        .status-card.bg-warning, 
+        .status-card.bg-info {
+            color: white !important;
+        }
+
+        /* Specific override for dark theme on status cards */
+        [data-bs-theme="dark"] .status-card.bg-warning {
+            color: #212529 !important; /* Ensure black text on yellow in dark mode */
+        }
+    </style>
+</head>
+<body data-bs-theme="light" class="d-flex flex-column min-vh-100"> 
+    
+    <div id="admin-dashboard-view" class="container-fluid p-4 flex-grow-1">
+        
+        <header class="d-flex justify-content-between align-items-center p-3 mb-4 rounded-3 shadow-sm">
+            <a href="indexd.html" class="d-flex align-items-center text-decoration-none">
+                <i class="fas fa-arrow-left me-3"></i>
+                <div>
+                    <h5 class="fw-bold mb-0">Back to Portal</h5>
+                    <small class="text-muted">FAS Supportive Portal</small>
+                </div>
+            </a>
+            
+            <h4 class="fw-bold mb-0 text-danger"><i class="fas fa-user-shield me-2"></i>ADMINISTRATOR VIEW</h4>
+            
+            <div class="d-flex align-items-center">
+                <button id="theme-toggle" class="btn btn-outline-secondary me-3" title="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <span class="fw-bold me-3">Admin User</span>
+                <img src="https://i.pravatar.cc/40?u=admin" class="rounded-circle" alt="Admin Avatar">
+            </div>
+        </header>
+
+        <h1 class="fw-bold display-4 mb-4 text-danger">Portal Management Dashboard ⚙️</h1>
+        <p class="text-muted fs-5">Monitor contributions, handle requests, and manage user activity.</p>
+
+        <div class="row g-4 mb-5">
+            <div class="col-md-6 col-lg-3">
+                <div class="card status-card bg-primary p-3 shadow">
+                    <div class="card-body">
+                        <h6 class="text-uppercase fw-bold">Pending Requests</h6>
+                        <h2 class="display-4 fw-bold mb-0">12</h2>
+                        <small class="text-white-50">New resource requests</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card status-card bg-success p-3 shadow">
+                    <div class="card-body">
+                        <h6 class="text-uppercase fw-bold">New Contributions</h6>
+                        <h2 class="display-4 fw-bold mb-0">5</h2>
+                        <small class="text-white-50">Awaiting review</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card status-card bg-warning p-3 shadow">
+                    <div class="card-body">
+                        <h6 class="text-uppercase fw-bold">Active Users</h6>
+                        <h2 class="display-4 fw-bold mb-0">87</h2>
+                        <small class="text-white-50">Online in the last 24h</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card status-card bg-info p-3 shadow">
+                    <div class="card-body">
+                        <h6 class="text-uppercase fw-bold">Total Resources</h6>
+                        <h2 class="display-4 fw-bold mb-0">458</h2>
+                        <small class="text-white-50">Slides, PPs, and Notes</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <h3 class="fw-bold mb-3">Recent Resource Requests</h3>
+                <div class="card p-3">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            PMT 2205 Past Paper (2024 S1)
+                            <span class="badge bg-danger">NEW</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            ICT 1101 Slides (Missing)
+                            <span class="badge bg-warning text-dark">Urgent</span>
+                        </li>
+                    </ul>
+                </div>
+                <a href="#" class="btn btn-sm btn-outline-danger w-100 mt-3">View All Requests</a>
+            </div>
+            
+            <div class="col-lg-6">
+                <h3 class="fw-bold mb-3">New Contributions</h3>
+                <div class="card p-3">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            BMS 3201 Notes (Kavindu)
+                            <span class="badge bg-success">Review</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            PMT 2205 PPTs (Anonymous)
+                            <span class="badge bg-success">Review</span>
+                        </li>
+                    </ul>
+                </div>
+                <a href="#" class="btn btn-sm btn-outline-success w-100 mt-3">View All Contributions</a>
+            </div>
+        </div>
+    </div>
+    <h2 class="fw-bold display-6 mb-4 mt-5 text-success">Resource Management ➕</h2>
+        
+        <div class="row g-4 mb-5">
+            
+            <div class="col-lg-4">
+                <div class="card p-4 h-100 border-success">
+                    <h5 class="fw-bold card-title mb-3 text-success">Add New Module</h5>
+                    <form>
+                        <div class="mb-3">
+                            <label for="moduleCode" class="form-label">Module Code (e.g., ICT 2213)</label>
+                            <input type="text" class="form-control" id="moduleCode" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="moduleName" class="form-label">Module Name</label>
+                            <input type="text" class="form-control" id="moduleName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="department" class="form-label">Department</label>
+                            <select class="form-select" id="department" required>
+                                <option value="">Select Department</option>
+                                <option>Computing</option>
+                                <option>Physical Sciences</option>
+                                <option>Biological Sciences</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-success w-100">Create Module</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card p-4 h-100 border-info">
+                    <h5 class="fw-bold card-title mb-3 text-info">Upload Slides / Notes</h5>
+                    <form>
+                        <div class="mb-3">
+                            <label for="fileModule" class="form-label">Select Module</label>
+                            <select class="form-select" id="fileModule" required>
+                                <option value="">ICT 2213</option>
+                                <option>PMT 2205</option>
+                                <option>BMS 3201</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="resourceTitle" class="form-label">Resource Title</label>
+                            <input type="text" class="form-control" id="resourceTitle" placeholder="e.g., Lecture 5 Slides" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="resourceFile" class="form-label">Upload File</label>
+                            <input class="form-control" type="file" id="resourceFile" required>
+                        </div>
+                        <button type="submit" class="btn btn-info w-100">Upload File</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card p-4 h-100 border-danger">
+                    <h5 class="fw-bold card-title mb-3 text-danger">Upload Past Paper</h5>
+                    <form>
+                        <div class="mb-3">
+                            <label for="paperModule" class="form-label">Select Module</label>
+                            <select class="form-select" id="paperModule" required>
+                                <option value="">ICT 2213</option>
+                                <option>PMT 2205</option>
+                                <option>BMS 3201</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="paperYear" class="form-label">Year / Semester</label>
+                            <input type="text" class="form-control" id="paperYear" placeholder="e.g., 2024 Semester 2" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="paperFile" class="form-label">Upload Paper (PDF)</label>
+                            <input class="form-control" type="file" id="paperFile" accept=".pdf" required>
+                        </div>
+                        <button type="submit" class="btn btn-danger w-100">Upload Paper</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+    
+
+
+    
+    <footer class="footer mt-auto py-3 border-top">
+        <div class="container-fluid d-flex justify-content-between align-items-center px-4">
+            <span class="text-muted">&copy; 2025 FAS Supportive Portal. Admin View.</span>
+            <div class="contact-info">
+                <span class="text-muted me-3">
+                    <i class="fas fa-envelope me-1"></i> 
+                    <a href="mailto:support@fas.rjt.ac.lk" class="text-decoration-none">admin@fas.rjt.ac.lk</a>
+                </span>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+        const LIGHT_ICON = 'fa-moon';
+        const DARK_ICON = 'fa-sun';
+        const THEME_STORAGE_KEY = 'theme-preference';
+
+        function applyTheme(theme) {
+            const isDark = theme === 'dark';
+            
+            body.setAttribute('data-bs-theme', theme);
+
+            const icon = themeToggle.querySelector('i');
+            if (isDark) {
+                icon.classList.replace(LIGHT_ICON, DARK_ICON);
+                themeToggle.title = "Toggle Light Mode";
+            } else {
+                icon.classList.replace(DARK_ICON, LIGHT_ICON);
+                themeToggle.title = "Toggle Dark Mode";
+            }
+            
+            localStorage.setItem(THEME_STORAGE_KEY, theme);
+        }
+
+        function initializeApp() {
+            const savedTheme = localStorage.getItem(THEME_STORAGE_KEY);
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            let initialTheme = 'light'; 
+
+            if (savedTheme) {
+                initialTheme = savedTheme;
+            } else if (prefersDark) {
+                initialTheme = 'dark';
+            }
+            applyTheme(initialTheme);
+            
+            themeToggle.addEventListener('click', () => {
+                const currentTheme = body.getAttribute('data-bs-theme');
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                applyTheme(newTheme);
+            });
+        }
+
+        initializeApp();
+    </script>
+</body>
+</html>

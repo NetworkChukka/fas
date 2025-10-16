@@ -1,0 +1,118 @@
+/* Apply dark mode styles to the body and its children */
+body.dark-mode {
+    background-color: #121212; /* Very dark primary background */
+    color: #e0e0e0; /* Default light text color */
+}
+
+/* -------------------- GENERAL & TYPOGRAPHY -------------------- */
+
+/* Ensure all generic anchors/links are visible (needed for unstyled text links) */
+body.dark-mode a {
+    color: #79a6fe !important; /* Soft blue for links */
+}
+
+/* General text/headings that might be overridden by Bootstrap text-dark */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+    color: #f0f0f0 !important; /* Consistent heading color */
+}
+
+/* Muted text (critical for consistency) */
+body.dark-mode .text-muted,
+body.dark-mode .card-subtitle {
+    color: #a0a0a0 !important; /* Muted gray for secondary information */
+}
+
+/* -------------------- LAYOUT & COMPONENTS -------------------- */
+
+/* Header Overrides */
+body.dark-mode header {
+    background-color: #1e1e1e !important; /* Dark header background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4) !important; /* Stronger shadow */
+    border-bottom: 1px solid #333333;
+}
+
+/* Footer Overrides */
+body.dark-mode .footer {
+    background-color: #1e1e1e !important; /* Matches header/card background */
+    border-top-color: #333333 !important;
+    color: #e0e0e0;
+}
+
+body.dark-mode .footer a {
+    color: #b0b0b0 !important; /* Muted links in the footer */
+}
+
+/* -------------------- CARDS & LISTS -------------------- */
+
+/* Main Content Cards Overrides */
+body.dark-mode .card {
+    background-color: #1e1e1e !important; /* Component background */
+    border-color: #333333 !important;
+    color: #e0e0e0;
+}
+
+body.dark-mode .card-header {
+    background-color: #1e1e1e !important; /* Matches card body for seamless look */
+    border-bottom: 1px solid #333333;
+    color: #e0e0e0;
+}
+
+body.dark-mode .list-group-item {
+    background-color: #1e1e1e !important;
+    border-color: #333333 !important;
+    color: #e0e0e0;
+}
+
+/* Quick Link Card Adjustments */
+body.dark-mode .quick-link {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Stronger shadow */
+    /* Text/Icon color is handled by the generic h5/a rules, 
+       but if quick links have a light color, ensure this stays: */
+    color: #ffffff !important; 
+}
+
+/* -------------------- FORMS & BUTTONS -------------------- */
+
+/* Search Bar Overrides (Input text should be visible) */
+body.dark-mode .search-bar .input-group-text,
+body.dark-mode .search-bar .form-control {
+    background-color: #2d2d2d !important; /* Slightly lighter input field */
+    color: #e0e0e0 !important; /* Input text color */
+    border-color: #3d3d3d !important;
+}
+
+body.dark-mode .search-bar .form-control::placeholder {
+    color: #999 !important;
+}
+
+/* Primary Button in Dark Mode */
+body.dark-mode .btn-primary {
+    /* Slightly softened blue to look better against dark background */
+    background-color: #4b88f5 !important; 
+    border-color: #4b88f5 !important;
+    color: white !important;
+}
+
+/* Secondary/Outline Button (Theme Toggle) */
+body.dark-mode .btn-outline-secondary {
+    color: #a0a0a0 !important;
+    border-color: #a0a0a0 !important;
+}
+body.dark-mode .btn-outline-secondary:hover {
+    background-color: #333333 !important;
+    color: white !important;
+}
+
+/* -------------------- ALERTS -------------------- */
+
+body.dark-mode .alert-warning-subtle {
+    /* Adjusted warning alert for readability */
+    color: #ffebcc !important; 
+    background-color: #4d3f23 !important; /* Deep reddish-brown background */
+    border-color: #66522c !important;
+}
